@@ -1,0 +1,51 @@
+MultiZAP++ test version 1.2
+
+STM32L432KC  
+	SB5, SB7 OPEN  // D7 PC14 
+	SB6, SB8 CLOSE // D8 PC15
+	SB18 OPEN  // for DAC1_CH2
+	
+PINS:
+	Keypad: 
+		Cols: D3, D4, D5, D6
+		Rows:D7, D8, D9, D10
+
+Beep:
+	D2
+
+Bluetooth:
+	TX		D0, RX
+	RX		D1, TX 
+	VCC  	3.3V
+	GND		GND
+	CE 		D11
+
+LCD:
+	SDA: D12
+	SDL: A6
+	+5V
+	GND
+
+DAC out:
+////////////	ch1		A3
+	ch2 	A4 
+
+ADC in:
+	IN10		A4	// Input for elektrod circuit
+
+
+Future downloadScript() async {
+    addTotermStr(blState.ltheraphy.fieldscript);
+    await blState.sendMessageToBluetooth('mem\r\n@\r\n').then((valu1) => {
+          Future.delayed(Duration(milliseconds: 100)).then((value) => {
+                blState
+                    .sendMessageToBluetooth(
+                        'mem\r\n' + blState.ltheraphy.fieldscript)
+                    .then(
+                      (value2) => {
+                        showSnack('Userprogram stored!'),
+                      },
+                    ),
+              }),
+        });
+  }
