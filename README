@@ -32,3 +32,5 @@ DAC out:
 
 ADC in:
 	IN10		A4	// Input for elektrod circuit
+
+#
