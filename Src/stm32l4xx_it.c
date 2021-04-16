@@ -60,7 +60,6 @@ extern DMA_HandleTypeDef hdma_adc1;
 extern DMA_HandleTypeDef hdma_dac_ch1;
 extern DAC_HandleTypeDef hdac1;
 extern TIM_HandleTypeDef htim6;
-extern TIM_HandleTypeDef htim7;
 extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart2;
 /* USER CODE BEGIN EV */
@@ -274,21 +273,8 @@ void TIM6_DAC_IRQHandler(void)
   /* USER CODE END TIM6_DAC_IRQn 1 */
 }
 
-/**
-  * @brief This function handles TIM7 global interrupt.
-  */
-void TIM7_IRQHandler(void)
-{
-  /* USER CODE BEGIN TIM7_IRQn 0 */
-
-  /* USER CODE END TIM7_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim7);
-  /* USER CODE BEGIN TIM7_IRQn 1 */
-
-  /* USER CODE END TIM7_IRQn 1 */
-}
-
 /* USER CODE BEGIN 1 */
+/*
 void EXTI9_5_IRQHandler(void)
 {
 	HAL_GPIO_EXTI_IRQHandler(D9_Pin);
@@ -296,9 +282,10 @@ void EXTI9_5_IRQHandler(void)
 
 void EXTI15_10_IRQHandler(void)
 {
-	HAL_GPIO_EXTI_IRQHandler(D7_Pin);
-	HAL_GPIO_EXTI_IRQHandler(D8_Pin);
-	HAL_GPIO_EXTI_IRQHandler(D10_Pin);
+	HAL_GPIO_EXTI_IRQHandler(KeypadIRQ_Pin);
+//	HAL_GPIO_EXTI_IRQHandler(D8_Pin);
+//	HAL_GPIO_EXTI_IRQHandler(D10_Pin);
 }
+*/
 /* USER CODE END 1 */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -13,7 +13,7 @@ using namespace std;
 #include <cstring>
 #include <sstream>
 
-#include "keypad.h"
+#include "i2c_keypad.h"
 #include "i2c_lcd.h"
 #include "biozap_comm.h"
 #include "biozap_freq.h"

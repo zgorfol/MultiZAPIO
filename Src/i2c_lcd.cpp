@@ -13,7 +13,7 @@ using namespace std;
 extern string EOL;
 //extern string lcd_msg;
 
-bool is_I2C = false;
+    bool is_I2C = false;
 
 void I2C_Scan(I2C_HandleTypeDef *hi2c, UART_HandleTypeDef *huart) {
     string info = "Scanning I2C bus...\r\n";

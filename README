@@ -5,10 +5,20 @@ STM32L432KC
 	SB6, SB8 CLOSE // D8 PC15
 	SB18 OPEN  // for DAC1_CH2
 	
-PINS:
-	Keypad: 
-		Cols: D3, D4, D5, D6
-		Rows:D7, D8, D9, D10
+Keypad I2C expander: 
+	SDA: 	D12
+	SDL: 	A6
+	VCC		+5V
+	GND		GND
+	INT		D8
+	P0		R0
+	P1		R1
+	P2		R2
+	P3		R3
+	P4		C0
+	P5		C1
+	P6		C2
+	P7		C3
 
 Beep:
 	D2
@@ -18,7 +28,7 @@ Bluetooth:
 	RX		D1, TX 
 	VCC  	3.3V
 	GND		GND
-	CE 		D11
+	CE 		D7
 
 LCD:
 	SDA: D12
