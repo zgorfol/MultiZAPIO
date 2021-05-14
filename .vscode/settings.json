@@ -1,4 +1,4 @@
 {
     "python.pythonPath": "/usr/local/bin/python3",
-    //"stm32-for-vscode.armToolchainPath": false
+    
 }
